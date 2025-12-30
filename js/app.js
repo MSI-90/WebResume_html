@@ -46,10 +46,26 @@ document.addEventListener("DOMContentLoaded", () => {
         document
           .querySelectorAll('.resume-items button')
           .forEach(b => b.classList.remove('active'));
-
         btn.classList.add('active');
+        itemVariant(btn);
       });
     })
+  }
+
+  function itemVariant(button) {
+    if (!button) return;
+
+    const target = button.dataset.target;
+    if (!target) return;
+
+    document
+      .querySelectorAll('.item-content [data-section]')
+      .forEach(section => {
+        section.classList.toggle(
+          'item-hidden',
+          section.dataset.section !== target
+        );
+      });
   }
 
 })

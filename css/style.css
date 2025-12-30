@@ -382,6 +382,10 @@ main {
   font-weight: bold;
 }
 
+.item-hidden {
+  display: none;
+}
+
 /*----default----*/
 
 html {

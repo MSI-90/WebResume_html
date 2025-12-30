@@ -100,7 +100,7 @@
         <div class="resume-wrapper">
           <div class="resume-items">
             <h3>Создайте своё резюме</h3>
-            <button>
+            <button data-target="fio">
               <span class="round-number">1</span>
               <span class="item-step-button-preview">ФИО и фото</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -108,7 +108,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="contact">
               <span class="round-number">2</span>
               <span class="item-step-button-preview">Контактная информация</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -116,7 +116,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="purpose-resume">
               <span class="round-number">3</span>
               <span class="item-step-button-preview">Цель резюме</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -124,7 +124,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="job-info">
               <span class="round-number">4</span>
               <span class="item-step-button-preview">Информация о должности</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -132,7 +132,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="personal-info">
               <span class="round-number">5</span>
               <span class="item-step-button-preview">Личная информация</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -140,7 +140,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="experience">
               <span class="round-number">6</span>
               <span class="item-step-button-preview">Опыт работы</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -148,7 +148,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="education">
               <span class="round-number">7</span>
               <span class="item-step-button-preview">Образование</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -156,7 +156,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="courses">
               <span class="round-number">8</span>
               <span class="item-step-button-preview">Курсы и тренинги</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -164,7 +164,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="languages">
               <span class="round-number">9</span>
               <span class="item-step-button-preview">Знание языков</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -172,7 +172,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="skills">
               <span class="round-number-2">10</span>
               <span class="item-step-button-preview">Навыки</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -180,7 +180,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="additional-info">
               <span class="round-number-2">11</span>
               <span class="item-step-button-preview">Дополнительная информация</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -188,7 +188,7 @@
               </svg>
               <span class="clear"></span>
             </button>
-            <button>
+            <button data-target="portfolio">
               <span class="round-number-2">12</span>
               <span class="item-step-button-preview">Портфолио</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -197,11 +197,10 @@
               <span class="clear"></span>
             </button>
           </div>
-
         </div>
         <div class="creator-item">
           <div class="item-content">
-            <div id="item-main">
+            <div data-section="fio" id="item-main" class="section item-hidden">
               <div class="item-main-header">
                 <h3>ФИО и фото</h3>
               </div>
