@@ -302,8 +302,8 @@ main {
   text-align: left;
 }
 
-/*ФИО и фото*/
-.item-content .item-main-body {
+/*Пункты резюме*/
+.item-content .item-main-body, .item-contact-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -311,7 +311,8 @@ main {
 }
 
 @media (max-width: 900px) {
-  .item-content .item-main-body {
+  .item-content .item-main-body,
+  .item-contact-body {
     grid-template-columns: 1fr;
   }
 }
@@ -338,13 +339,13 @@ main {
   top: 37px;
 }
 
-.item-main-body label {
+.item-main-body label, .item-contact-body label {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(0.7rem, 3vw, 0.9vw);
   font-weight: 500;
 }
 
-.item-main-body #Family, #Name, #Father-name {
+.item-main-body #Family, #Name, #Father-name, #phone, #email {
   border: 3px solid #f48fb1;
   border-radius: 7px;
   box-sizing: border-box;
@@ -384,6 +385,23 @@ main {
 
 .item-hidden {
   display: none;
+}
+
+.add-social {
+  grid-column: span 2;
+}
+
+.add-social button {
+  border-radius: 7px;
+  background-color: #f2ebf8;
+  border-color: #e1dcf8;
+  color: brown;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 3vw, 0.8vw);
+  font-weight: bold;
+  height: 50px;
+  padding: 5px 15px;
+  width: 96%;
 }
 
 /*----default----*/
