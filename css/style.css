@@ -189,6 +189,7 @@ main {
 
 /* Resume builder*/
 .resume {
+  align-items: flex-start;
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -196,7 +197,6 @@ main {
   gap: 30px;
   position: relative;
   top: 5vh;
-  max-height: 200vh;
 }
 
 .resume-wrapper {
@@ -292,7 +292,6 @@ main {
   padding-left: 30px;
   position: relative;
   width: 35vw;
-  height: 55vh;
 }
 
 .item-content h3{
@@ -355,7 +354,7 @@ main {
 }
 
 .creator-item .creator-footer {
-  margin-top: auto;
+  margin-top: 25px;
   padding-bottom: 20px;
 }
 
@@ -414,6 +413,15 @@ main {
   .add-social button {
     width: 93%;
   }
+}
+
+#item-purpose article {
+  color: #2e2e38;
+}
+
+#item-purpose ul li::marker {
+  color: orange;
+  font-size: 1.2em;
 }
 
 .item-purpose-body textarea {
