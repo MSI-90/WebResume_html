@@ -211,17 +211,37 @@
                   <span id="photo-sp">Добавьте фото</span>
                 </div>
                 <div>
-                  <label id="fam" for="Family">Фамилия</label><br />
-                  <input type="text" id="Family" required spellcheck="false" />
+                  <label id="fam" for="family">Фамилия</label><br />
+                  <input type="text" id="family" required spellcheck="false" />
                 </div>
                 <div>
-                  <label for="Name">Имя</label><br />
-                  <input type="text" id="Name" required spellcheck="false" />
+                  <label for="name">Имя</label><br />
+                  <input type="text" id="name" required spellcheck="false" />
                 </div>
                 <div>
-                  <label for="Father-name">Отчество</label><br />
-                  <input type="text" id="Father-name" required spellcheck="false" />
+                  <label for="father-name">Отчество</label><br />
+                  <input type="text" id="father-name" required spellcheck="false" />
                 </div>
+              </div>
+              <div class="preview-resume">
+                <section>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                       width="26px" height="30px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                      <g>
+                      <g>
+                        <path fill="#CCCC00" stroke="#F45389" stroke-linejoin="round" d="M32.04,37.515l1.572,1.572c-2.4,4.309-7.411,4.037-7.411,4.037
+                        c-8.447,0-7.826-5.65-7.826-5.65l0.994-12.05c0.249-3.293-2.981-3.23-2.981-3.23v-1.987h10.931l-0.992,17.143
+                        c0,0,0.082,2.156,2.566,2.072C31.376,39.337,32.04,37.515,32.04,37.515z"/>
+                        <circle fill="#CCCC00" stroke="#F45389" stroke-linejoin="round" cx="23.014" cy="11.51" r="4.637"/>
+                      </g>
+                      </g>
+                    </svg>
+                </section>
+                <section>
+                    <span>
+                      Укажите ваше полное имя и при необходимости — фото. Это первое, что видит работодатель.
+                    </span>
+                </section>
               </div>
             </div>
 
@@ -270,10 +290,49 @@
                 <textarea id="purpose" spellcheck="true"></textarea>
               </div>
             </div>
+            <div data-section="job-info" id="item-job" class="section item-hidden">
+              <div class="item-main-header">
+                <h3>Желаемая должность</h3>
+              </div>
+              <div class="item-job-body">
+                <div>
+                  <label for="job">Должность</label><br />
+                  <input type="text" id="job" spellcheck="false" />
+                </div>
+                <br />
+                <div class="desired-job-info">
+                  <div>
+                    <label for="amount">Желаемая зарплата</label><br/>
+                    <input type="number" id="amount" spellcheck="false" />
+                  </div>
+                  <div>
+                    <label for="currency">Валюта</label><br/>
+                    <input type="text" id="currency" spellcheck="false" />
+                  </div>
+                  <div class="agreement">
+                    <label class="agreement-label">По договорённости</label>
+                    <label class="checkbox-wrapper">
+                      <input type="checkbox" id="by-agreement" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div>
+                    <br />
+                    <label for="employment-type">Тип занятости</label><br />
+                    <input type="text" id="employment-type" spellcheck="false" />
+                  </div>
+                  <div>
+                    <br />
+                    <label for="work-schedule">График работы</label><br />
+                    <input type="text" id="work-schedule" spellcheck="false" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
           </div>
             <div class="creator-footer">
-              Footer
               <button class="save-button">
                 <span>Сохранить и сформировать</span>
               </button>
@@ -283,12 +342,8 @@
               </button>
             </div>
         </div>
-        <div class="preview-resume" style="color: navy; background: lightgray;">
-          Предварительный просмотр
-          <p>По мере наполнения резюме информацией здесь <br /> будет формироваться предварительный вид.</p>
-        </div>
-      </div>
 
+      </div>
     </main>
     <footer></footer>
 

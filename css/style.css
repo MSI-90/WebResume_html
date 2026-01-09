@@ -17,7 +17,7 @@ body{
   background-position: center 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
+  width: 100%;
   margin: 0;
 }
 
@@ -30,7 +30,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-top: 1vh;
-  width: 95vw;
+  width: 100vw; /*95*/
   min-height: calc(100vh - 3vh);
 }
 
@@ -282,6 +282,84 @@ main {
   clear: both;
 }
 
+.resume > :last-child {
+
+}
+
+.preview-resume {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(200, 200, 220, 0.6);
+  color: #9900CC;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+  position: sticky;
+  margin-left: 10px;
+  margin-top: 10px;
+  min-width: 0;
+  width: 90%;
+  justify-content: center;
+}
+
+.preview-resume >:first-child {
+  align-items: center;
+  border-right: 1px solid rgba(255, 150, 116, 0.9);
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 50%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 10%;
+}
+
+.preview-resume >:first-child:hover {
+  svg{
+    width: 48px;
+    height: 48px;
+  }
+  cursor: pointer;
+}
+
+.preview-resume > :first-child svg {
+  width: 26px;
+  height: 30px;
+  transition: width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+.preview-resume >:first-child svg:hover {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+.preview-resume >:last-child {
+  flex: 1;
+  min-width: 0;
+  text-align: justify;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.preview-resume p {
+  margin: 0;
+}
+
+.preview-resume .instruction {
+  display: flex;
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: justify;
+  word-break: break-word;
+  width: 93%;
+}
+
 /*Контент билдера*/
 .creator-item {
   background-color: rgba(250, 245, 252, 0.78);
@@ -337,13 +415,13 @@ main {
   top: 37px;
 }
 
-.item-main-body label, .item-contact-body label {
+.item-main-body label, .item-contact-body label, .desired-job-info label {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(0.7rem, 3vw, 0.9vw);
   font-weight: 500;
 }
 
-.item-main-body #Family, #Name, #Father-name, #phone, #email {
+.item-main-body #family, #name, #father-name, #phone, #email {
   border: 3px solid #f48fb1;
   border-radius: 7px;
   box-sizing: border-box;
@@ -356,6 +434,7 @@ main {
 .creator-item .creator-footer {
   margin-top: 25px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .save-button, .next-button {
@@ -415,7 +494,7 @@ main {
   }
 }
 
-#item-purpose article {
+#item-purpose {
   color: #2e2e38;
 }
 
@@ -432,7 +511,7 @@ main {
   padding: 16px;
   color: #070127;
   transition: 0.2s;
-  font: 16px "Roboto", sans-serif;
+  font: 17px "Roboto", sans-serif;
   font-weight: 300;
   min-height: 150px;
 }
@@ -441,6 +520,101 @@ main {
   .item-purpose-body textarea {
     width: 76%;
   }
+}
+
+.item-job-body #job{
+  border: 3px solid #f48fb1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: #44426c;
+  font-weight: 550;
+  padding: 10px 15px;
+  width: 96%;
+}
+
+.item-job-body label {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.7rem, 3vw, 0.9vw);
+  font-weight: 500;
+}
+
+@media (max-width: 1570px) {
+  .item-content .desired-job-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .item-job-body #job {
+    width: 93%;
+  }
+}
+
+.desired-job-info {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1px;
+  width: 95%;
+}
+
+.desired-job-info #amount, #currency, #employment-type, #work-schedule{
+  border: 3px solid #f48fb1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  color: #44426c;
+  font-weight: 550;
+  padding: 10px 15px;
+}
+
+.agreement {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Checkbox*/
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  height: 38px; /* под высоту input */
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkmark {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #f48fb1;
+  border-radius: 6px;
+  background-color: #f2ebf8;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper input:checked + .checkmark {
+  background-color: #fa5682;
+  border-color: #75a08b;
+}
+
+.checkbox-wrapper input:checked + .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper:hover .checkmark {
+  box-shadow: 0 0 0 3px rgba(244, 143, 177, 0.3);
 }
 
 /*----default----*/
