@@ -290,6 +290,7 @@
                 <textarea id="purpose" spellcheck="true"></textarea>
               </div>
             </div>
+
             <div data-section="job-info" id="item-job" class="section item-hidden">
               <div class="item-main-header">
                 <h3>Желаемая должность</h3>
@@ -329,6 +330,7 @@
                 </div>
               </div>
             </div>
+
             <div data-section="personal-info" id="item-personal" class="section item-hidden">
               <div class="item-main-header">
                 <h3>Личная информация</h3>
@@ -420,7 +422,71 @@
               </div>
             </div>
 
+            <div data-section="experience" id="item-experience" class="section item-hidden">
+              <div class="item-main-header">
+                <h3>Опыт работы</h3>
+              </div>
+              <div class="item-experience-body">
+                <div>
+                  <label for="company">Компания</label><br />
+                  <input type="text" id="company" spellcheck="false" />
+                </div>
+                <br />
+                <div>
+                  <label for="job-title">Занимаемая должность</label><br />
+                  <input type="text" id="job-title" spellcheck="false" />
+                </div>
+                <div class="period">
+                  <div class="item-1">
+                    <label for="period-start-month">Начало работы</label><br />
+                    <select id="period-start-month" required>
+                      <option>Май</option>
+                      <option>Сентябрь</option>
+                    </select>
+                    <select id="period-start-year" required>
+                      <option>2025</option>
+                    </select>
+                  </div>
+                  <div class="item-2">
+                    <div id="label-end">
+                      <label for="period-end-month">Окончание</label>
+                    </div>
+                    <div class="clear"></div>
+                    <select id="period-end-month">
+                      <option>Июль</option>
+                      <option>Сентябрь</option>
+                    </select>
+                    <select id="period-end-year">
+                      <option>2025</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="job-now-container">
+                  <div class="toggle-switch">
+                    <input type="checkbox" id="job-now" class="toggle-input">
+                    <label for="job-now" class="toggle-label"></label>
+                    <span>Работаю сейчас</span>
+                  </div>
+                </div>
+                <div id="job-responsibilities-container">
+                  <label for="job-responsibilities">Должностные обязанности на занимаемой должности</label>
+                  <textarea spellcheck="false" id="job-responsibilities"></textarea>
+                </div>
+                <div id="job-Achievements-container">
+                  <label for="job-Achievements">Достижения</label>
+                  <textarea spellcheck="false" id="job-Achievements"></textarea>
+                </div>
+                <div class="button-group">
+                  <button class="save-button">Сохранить</button>
+                  <button class="remove-button">Удалить</button>
+                  <div class="add-experience">
+                    <button class="add-button">Добавить</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <!--
             <div class="creator-footer">
               <button class="save-button">
                 <span>Сохранить и сформировать</span>
@@ -430,6 +496,7 @@
                 <span class="next-step"></span>
               </button>
             </div>
+            /-->
         </div>
 
       </div>
