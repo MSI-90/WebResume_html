@@ -745,6 +745,7 @@ main {
   box-shadow: 0 0 0 3px rgba(244, 143, 177, 0.3);
 }
 
+/*Опыт работы*/
 .item-experience-body #company, #job-title {
   border: 3px solid #f48fb1;
   border-radius: 7px;
@@ -755,7 +756,6 @@ main {
   width: 96%;
 }
 
-/*Опыт работы*/
 .period {
   display: flex;
   flex-direction: row;
@@ -820,11 +820,11 @@ main {
   font-size: clamp(0.7rem, 3vw, 0.7vw) !important;
 }
 
-#job-Achievements-container {
+#job-achievements-container {
   margin-top: 50px;
 }
 
-#job-Achievements-container label {
+#job-achievements-container label {
   font-size: clamp(0.7rem, 3vw, 0.7vw) !important;
 }
 
@@ -925,6 +925,60 @@ main {
     flex-direction: column;
   }
 }
+
+/*new resume builder styles*/
+.resume__header {
+  align-items: center;
+  background: linear-gradient(to right, #8896f7, transparent);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  color: #44426c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  font-size: clamp(0.7rem, 3vw, 0.8vw);
+  font-family: 'Inter', 'Manrope', sans-serif;
+  margin-left: 40px;
+  width: 50vw
+}
+
+.resume__back-button,
+.resume__step-number,
+.resume__step-title {
+  font-size: clamp(0.7rem, 3vw, 1.0vw);
+}
+
+.resume__step-title {
+  color: #545091;
+  font-weight: bold;
+}
+
+.resume__back-button {
+  background: linear-gradient(to right, #738af8, #a1a8f9);
+  border: 2px solid #798bf5;
+  border-radius: 7px;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+
+.resume__decoration {
+  display: flex;
+  gap: 30px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+.resume__step-number {
+  color: #8B5CF6;
+}
+
 /*----default----*/
 
 html {
